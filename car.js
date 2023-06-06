@@ -16,6 +16,7 @@ class Car {
 
     this.controls = new ArrowControls();
   }
+  
   update() {
     this.#handleMovement();
   }
@@ -41,10 +42,7 @@ class Car {
       this.speed = 0;
     }
 
-    //Rotation
-    // const flip = this.speed <= 0 ? 1 : -1;
-    // console.log(flip);
-
+    //Rotation (Only allow rotation when moving)
     if(this.speed != 0)
     {
       const flip = this.speed < 0 ? 1 : -1;
