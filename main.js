@@ -1,10 +1,10 @@
 const canvas = document.getElementById('myCanvas');
 canvas.height = window.innerHeight;
-canvas.width = 400
+canvas.width = 600;
 
 const ctx = canvas.getContext('2d');
 
-const car = new Car(200, 200, 80, 140);
+const car = new Car(300, 200, 80, 140);
 car.draw(ctx);
 
 updateLoop();
