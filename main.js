@@ -11,15 +11,15 @@ car.draw(ctx);
 updateLoop();
 
 function updateLoop() {
-  requestAnimationFrame(updateLoop);
-
   //Clear canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+  
   //Draw the road
   road.draw(ctx);
- 
+  
   //Update and draw the car
   car.update();
   car.draw(ctx);
+  
+  requestAnimationFrame(updateLoop);
 }

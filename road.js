@@ -1,4 +1,6 @@
 class Road {
+  #SIDE_MARGIN = 20;
+
   constructor(x, width) {
     this.x = x;
     this.width = width;
@@ -11,17 +13,17 @@ class Road {
   }
 
   draw(ctx) {
-    ctx.lineWidth = 20;
-    ctx.strokeStyle = 'green';
+    ctx.lineWidth = this.#SIDE_MARGIN;
+    ctx.strokeStyle = 'black';
 
     ctx.beginPath();
-    ctx.moveTo(this.left, this.top);
-    ctx.lineTo(this.left, this.bottom);
+    ctx.moveTo(this.left + this.#SIDE_MARGIN/2, this.top);
+    ctx.lineTo(this.left + this.#SIDE_MARGIN/2, this.bottom);
     ctx.stroke();
 
     ctx.beginPath();
-    ctx.moveTo(this.right, this.top);
-    ctx.lineTo(this.right, this.bottom);
+    ctx.moveTo(this.right - this.#SIDE_MARGIN/2, this.top);
+    ctx.lineTo(this.right - this.#SIDE_MARGIN/2, this.bottom);
     ctx.stroke();
   }
 }
