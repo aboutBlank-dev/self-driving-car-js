@@ -12,7 +12,6 @@ class Car {
 
     this.rotation = 0;
     this.turnSpeed = 0.1;
-    this.pivotHeightPercentage = 0.85;
 
     this.controls = new ArrowControls();
   }
@@ -63,7 +62,7 @@ class Car {
     ctx.fillStyle = 'black';
     ctx.rect(
       -this.width/2,
-      -this.height*this.pivotHeightPercentage, 
+      -this.height/2, 
       this.width, 
       this.height
     );
